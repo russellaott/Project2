@@ -1,0 +1,13 @@
+#DOB-row{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#ver-checkbox{
+    float: right;
+    margin-right: 150px;
+}
+
+#ver-submit{
+ border-radius: 0px;
+}
