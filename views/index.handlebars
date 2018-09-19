@@ -1,21 +1,32 @@
-    <div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid">
 
-        <div class="container">
+    <div class="container">
 
-            <h1>Roadster</h1>
-            <h4>don't hit the road alone</h4>
-            <p>A place for roadtrippers to team up...</p>
-
-        </div>
-
+        <h1>Roadster</h1>
+        <h4>don't hit the road alone</h4>
+        <p>A place for roadtrippers to team up...</p>
 
     </div>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <button>Host a trip</button>
-            <button>Browse trips</button>
-            <button>Search trips</button>
-            <button>Trip details</button>
-        </div>
+
+</div>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <button type="button" class="btn btn-dark">Host a trip</button>
+        <button type="button" class="btn btn-dark" id="browse">Browse trips</button>
+        <button type="button" class="btn btn-dark">Search trips</button>
+        <button type="button" class="btn btn-dark">Trip details</button>
     </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+    </div>
+
+    <div class="col-4">
+        {{#each trip}} {{>trips/trip-block}} {{/each}}
+    </div>
+
+    <div class="col-4"></div>
+</div>

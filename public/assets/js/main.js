@@ -42,10 +42,17 @@ function ageVer() {
     else{
         //route to homepage goes here!
         module.exports = function (app) {
-            app.get("index", function(req, res) {
-                res.sendFile(path.join(__dirname + "/../../views.index.handlebars"));
+            app.get("*", function(req, res) {
+                res.sendFile(path.join(__dirname, "/../../views.index.handlebars"));
             });
         }
         console.log("User is 18")
     }
 }
+
+// $(function () {
+//     $("#browse").on("click", function(event){
+//         event.preventDefault();
+        
+//     })
+// })
