@@ -1,0 +1,39 @@
+#DOB-row{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#ver-checkbox{
+    float: right;
+    margin-right: 150px;
+}
+
+#ver-submit{
+ border-radius: 0px;
+}
+
+.jumbotron {
+    background: rgba(207, 95, 114, 0.411);
+    margin-block-end: 0;
+}
+
+body {
+    background-image: url(https://itsreallykita.com/winter2016/wp-content/uploads/2017/05/bigstock-Group-of-happy-young-friends-i-170106395.jpg);
+    background-size: auto;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Indie Flower', cursive;
+    color: rgb(230, 116, 10);
+    
+}
+
+button {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+}
