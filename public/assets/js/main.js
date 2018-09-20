@@ -11,7 +11,12 @@ $("#ver-submit").on("click", function (event) {
 
     if ((verMonth === "") || (verDay === "") || (verYear === "")) {
         //replace with SWAL
-        alert("PLEASE FILL IN EMPTY FIELDS");
+        swal({
+            icon: "error",
+            title: "MISSING INFO",
+            text: "Please fill in empty fields.",
+            button: "Ok"
+        });
     }
     else {
         ageVer();
@@ -29,13 +34,28 @@ function ageVer() {
     var day = parseInt(todayDay) - parseInt(verDay);
 
     if(year < 18){
-        alert("UNABLE TO ACCESS HOMEPAGE");
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
     else if(month < 0){
-        alert("UNABLE TO ACCESS HOMEPAGE");
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
     else if(day < 0){
-        alert("UNABLE TO ACCESS HOMEPAGE");
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
     else{
         //route to homepage goes here!
