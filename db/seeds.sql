@@ -1,2 +1,2 @@
-INSERT INTO trip (departCity, departState, destinationCity, destinationState, dt, smoking, details) VALUES ('Philadelphia', 'PA', 'San Diego', 'CA', '2018-04-03', false, 'This is an example of the details the host will input into the database...');
-
+INSERT INTO trip (departCity, departState, destinationCity, destinationState, dt, smoking, details)
+VALUES ('Dallas', 'Texas', 'Destin', 'Florida', '2019-07-04' , TRUE , 'Looking for someone to ride straight through to Destin with me.');
