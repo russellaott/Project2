@@ -1,5 +1,3 @@
-var path = require("path");
-
 var verMonth = ""
 var verDay = ""
 var verYear = ""
@@ -41,18 +39,29 @@ function ageVer() {
     }
     else{
         //route to homepage goes here!
-        module.exports = function (app) {
-            app.get("*", function(req, res) {
-                res.sendFile(path.join(__dirname, "/../../views.index.handlebars"));
-            });
-        }
+        document.location.href="/home";
         console.log("User is 18")
     }
 }
 
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
 // $(function () {
-//     $("#browse").on("click", function(event){
+//     $("#joinTrip").on("click", function(event){
 //         event.preventDefault();
-        
+//         var id = $(this).data("id");
+//         var seatsUpdate = $(this).data("seatsUpdate");
+
+//         var updatedSeats = {
+//             seats: seatsUpdate
+//         };
+
+//         // $.ajax("/api/trip/" + id, {
+//         //     type: "PUT"
+//         // })
 //     })
 // })
