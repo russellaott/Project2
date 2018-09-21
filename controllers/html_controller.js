@@ -14,4 +14,12 @@ router.get("/browse", function (req, res) {
     res.sendFile(path.join(__dirname, "../views/browse.handlebars"));
 });
 
+router.get("/search", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/search.handlebars"));
+})
+
+router.get("/host", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/host.handlebars"));
+})
+
 module.exports = router;

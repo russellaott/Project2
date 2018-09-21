@@ -4,7 +4,7 @@ var verYear = ""
 
 $("#ver-submit").on("click", function (event) {
     event.preventDefault();
-    
+
     verMonth = $("#ver-month-input").val().trim();
     verDay = $("#ver-day-input").val().trim();
     verYear = $("#ver-year-input").val().trim();
@@ -28,40 +28,19 @@ function ageVer() {
     var month = parseInt(todayMonth) - parseInt(verMonth);
     var day = parseInt(todayDay) - parseInt(verDay);
 
-    if(year < 18){
+    if (year < 18) {
         alert("UNABLE TO ACCESS HOMEPAGE");
     }
-    else if(month < 0){
+    else if (month < 0) {
         alert("UNABLE TO ACCESS HOMEPAGE");
     }
-    else if(day < 0){
+    else if (day < 0) {
         alert("UNABLE TO ACCESS HOMEPAGE");
     }
-    else{
-        //route to homepage goes here!
-        document.location.href="/home";
+    else {
+        // ROUTE GOES HERE 
+        // window.location.href = "/home";
+
         console.log("User is 18")
     }
 }
-
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-
-// $(function () {
-//     $("#joinTrip").on("click", function(event){
-//         event.preventDefault();
-//         var id = $(this).data("id");
-//         var seatsUpdate = $(this).data("seatsUpdate");
-
-//         var updatedSeats = {
-//             seats: seatsUpdate
-//         };
-
-//         // $.ajax("/api/trip/" + id, {
-//         //     type: "PUT"
-//         // })
-//     })
-// })
