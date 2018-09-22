@@ -4,3 +4,4 @@ INSERT INTO trip (departCity, departState, destinationCity, destinationState, dt
 
 
 
+
