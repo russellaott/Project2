@@ -44,3 +44,22 @@ function ageVer() {
         console.log("User is 18")
     }
 }
+
+$(function () {
+    $("#joinTrip").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).data("id");
+        //var userInput = $(this).data(parseInt("#joinTrip"))
+        var updatedSeats = {
+            seats: (seats - 1)
+        };
+
+        $.ajax("/api/trip/" + id, {
+            method: "PUT",
+            data: updatedSeats
+        }).then(function () {
+            console.log("The seats have been updated..");
+            location.reload();
+        });
+    })
+})

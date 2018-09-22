@@ -2,9 +2,9 @@ $(function () {
     $("#joinTrip").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
-        var userInput = parseInt("#joinTrip")
+        //var userInput = $(this).data(parseInt("#joinTrip"))
         var updatedSeats = {
-            seats: seats - userInput
+            seats: seats - 1
         };
 
         $.ajax("/api/trip/" + id, {
