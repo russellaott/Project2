@@ -3,5 +3,3 @@ INSERT INTO trip (departCity, departState, destinationCity, destinationState, dt
 INSERT INTO trip (departCity, departState, destinationCity, destinationState, dt, smoking, seats, details) VALUES ('Portland', 'OR', 'Portland', 'MA', '2018-12-12', false, 1, "Driving to Portland..");
 
 
-
-

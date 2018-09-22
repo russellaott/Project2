@@ -1,0 +1,75 @@
+<div id="search-background">
+
+    <div class="jumbotron jumbotron-fluid" id="search-jumbo">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12" id="ver-header-1">
+                    <h2 class="display-4">Where are you heading?</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="ver-header-2">
+                    <h4 class="lead ml-4">Fill in the information below to find a trip!</h4>
+                </div>
+            </div>
+
+            <div class="row mx-5 my-3" id="DOB-row">
+                <div class="col-md-3">
+                    <form>
+                        <input class="form-control" type="text" name="dep-city" id="dep-city-input" placeholder="City">
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <form>
+                        <select name="states" class="form-control" id="dep-state">
+                            {{#each states}}
+                            <option value="{{name}}">{{abbreviation}}</option>
+                            {{/each}}
+                        </select>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="text-center">- TO - </h4>
+                </div>
+                <div class="col-md-3">
+                    <form>
+                        <input class="form-control" type="text" name="arr-city" id="arr-city-input" placeholder="City">
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <form>
+                         <select name="states" class="form-control" id="arr-state">
+                            {{#each states}}
+                            <option value="{{name}}">{{abbreviation}}</option>
+                            {{/each}}
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <button id="submit-search" type="button" class="mx-auto mt-5">Search</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid text-center" id="search-nav">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="search-btn" id="host-btn">Host A Trip</button>
+            </div>
+            <div class="col-md-4">
+                <button class="search-btn" id="browse-btn">Browse Trips</button>
+            </div>
+            <div class="col-md-4">
+                <button class="search-btn" id="home-btn">Go Home</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="" async defer></script>
+</div>

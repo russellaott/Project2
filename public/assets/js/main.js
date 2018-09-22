@@ -1,3 +1,5 @@
+// Verification page functionality
+
 var verMonth = ""
 var verDay = ""
 var verYear = ""
@@ -11,7 +13,12 @@ $("#ver-submit").on("click", function (event) {
 
     if ((verMonth === "") || (verDay === "") || (verYear === "")) {
         //replace with SWAL
-        alert("PLEASE FILL IN EMPTY FIELDS");
+        swal({
+            icon: "error",
+            title: "MISSING INFO",
+            text: "Please fill in empty fields.",
+            button: "Ok"
+        });
     }
     else {
         ageVer();
@@ -28,38 +35,52 @@ function ageVer() {
     var month = parseInt(todayMonth) - parseInt(verMonth);
     var day = parseInt(todayDay) - parseInt(verDay);
 
-    if (year < 18) {
-        alert("UNABLE TO ACCESS HOMEPAGE");
+    if(year < 18){
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
-    else if (month < 0) {
-        alert("UNABLE TO ACCESS HOMEPAGE");
+    else if(month < 0){
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
-    else if (day < 0) {
-        alert("UNABLE TO ACCESS HOMEPAGE");
+    else if(day < 0){
+        swal({
+            icon: "error",
+            title: "ERROR",
+            text: "Must be 18+ to access.",
+            button: "Ok"
+        });
     }
-    else {
-        // ROUTE GOES HERE 
-        // window.location.href = "/home";
+    else{
         window.location.href = "/home";
         console.log("User is 18")
     }
-}
+};
 
-$(function () {
-    $("#joinTrip").on("click", function (event) {
-        event.preventDefault();
-        var id = $(this).data("id");
-        //var userInput = $(this).data(parseInt("#joinTrip"))
-        var updatedSeats = {
-            seats: (seats - 1)
-        };
 
-        $.ajax("/api/trip/" + id, {
-            method: "PUT",
-            data: updatedSeats
-        }).then(function () {
-            console.log("The seats have been updated..");
-            location.reload();
-        });
-    })
-})
+
+//Home page button functionality
+
+$("#host-btn").on("click", function (event) {
+    window.location.href = "/host";
+});
+
+$("#browse-btn").on("click", function (event) {
+    window.location.href = "/browse";
+});
+
+$("#search-btn").on("click", function (event) {
+    window.location.href = "/search";
+});
+
+$("#home-btn").on("click", function (event) {
+    window.location.href = "/home";
+});
