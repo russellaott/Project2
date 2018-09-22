@@ -80,3 +80,7 @@ $("#browse-btn").on("click", function (event) {
 $("#search-btn").on("click", function (event) {
     window.location.href = "/search";
 });
+
+$("#home-btn").on("click", function (event) {
+    window.location.href = "/home";
+});
