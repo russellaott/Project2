@@ -3,23 +3,23 @@ var path = require("path");
 var router = express.Router();
 
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    res.render("index");
 });
 
 router.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/home.handlebars"));
+    res.render("home");
 });
 
 router.get("/browse", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/browse.handlebars"));
+    res.render("browse");
 });
 
 router.get("/search", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/search.handlebars"));
+    res.render("search");
 })
 
 router.get("/host", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/host.handlebars"));
+    res.render("host");
 })
 
 module.exports = router;

@@ -40,7 +40,7 @@ function ageVer() {
     else {
         // ROUTE GOES HERE 
         // window.location.href = "/home";
-
+        window.location.href = "/home";
         console.log("User is 18")
     }
 }

@@ -25,6 +25,7 @@ router.post("/api/trip", function (req, res) {
         req.body.destinationState, 
         req.body.dt, 
         req.body.smoking, 
+        req.body.seats,
         req.body.details
     ], function (result) {
             res.json({ id: result.insertId })
@@ -42,6 +43,7 @@ router.put("/api/trip/:id", function (req, res) {
         destinationState: req.body.destinationState, 
         dt: req.body.dt, 
         smoking: req.body.smoking, 
+        seats: req.body.seats,
         details: req.body.details
     }, condition, function (results) {
         if (results.changedRows === 0) {
