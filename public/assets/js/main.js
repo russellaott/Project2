@@ -45,21 +45,21 @@ function ageVer() {
     }
 }
 
-$(function () {
+// $(function () {
     $("#joinTrip").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
         //var userInput = $(this).data(parseInt("#joinTrip"))
-        var updatedSeats = {
-            seats: (seats - 1)
+        var seatsUpdate = {
+            seats: parseInt(seats - 1)
         };
 
         $.ajax("/api/trip/" + id, {
             method: "PUT",
-            data: updatedSeats
+            data: seatsUpdate
         }).then(function () {
             console.log("The seats have been updated..");
             location.reload();
         });
     })
-})
+// });
