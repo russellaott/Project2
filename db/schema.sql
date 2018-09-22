@@ -12,7 +12,8 @@ CREATE TABLE trip
 	destinationState VARCHAR (10) NOT NULL,
     dt DATE,
     smoking BOOLEAN default false,
-    details TEXT(500) CHARACTER SET utf8,
+	seats int NOT NULL,
+    details VARCHAR(500) CHARACTER SET utf8,
 	PRIMARY KEY (id)
 );
 

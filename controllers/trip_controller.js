@@ -5,13 +5,13 @@ var router = express.Router();
 // Import the model to use its database functions.
 var trip = require("../models/trip.js");
 
-router.get("/", function (req, res) {
+router.get("/browse", function (req, res) {
     trip.all(function (data) {
         var hbsObject = {
             trip: data
         };
         console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("browse", hbsObject);
     });
 });
 
@@ -25,6 +25,7 @@ router.post("/api/trip", function (req, res) {
         req.body.destinationState, 
         req.body.dt, 
         req.body.smoking, 
+        req.body.seats,
         req.body.details
     ], function (result) {
             res.json({ id: result.insertId })
@@ -42,6 +43,7 @@ router.put("/api/trip/:id", function (req, res) {
         destinationState: req.body.destinationState, 
         dt: req.body.dt, 
         smoking: req.body.smoking, 
+        seats: req.body.seats,
         details: req.body.details
     }, condition, function (results) {
         if (results.changedRows === 0) {

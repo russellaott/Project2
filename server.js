@@ -20,6 +20,9 @@ app.set("view engine", "handlebars");
 var routes = require("./controllers/trip_controller.js");
 app.use(routes);
 
+var routes = require("./controllers/html_controller.js");
+app.use(routes);
+
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);
 })
