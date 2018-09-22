@@ -5,13 +5,13 @@ var router = express.Router();
 // Import the model to use its database functions.
 var trip = require("../models/trip.js");
 
-router.get("/", function (req, res) {
+router.get("/browse", function (req, res) {
     trip.all(function (data) {
         var hbsObject = {
             trip: data
         };
         console.log(hbsObject);
-        res.render("index", hbsObject);
+        res.render("browse", hbsObject);
     });
 });
 

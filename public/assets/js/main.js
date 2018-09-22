@@ -1,10 +1,12 @@
+// Verification page functionality
+
 var verMonth = ""
 var verDay = ""
 var verYear = ""
 
 $("#ver-submit").on("click", function (event) {
     event.preventDefault();
-    
+
     verMonth = $("#ver-month-input").val().trim();
     verDay = $("#ver-day-input").val().trim();
     verYear = $("#ver-year-input").val().trim();
@@ -58,7 +60,23 @@ function ageVer() {
         });
     }
     else{
-        //route to homepage goes here!
+        window.location.href = "/home";
         console.log("User is 18")
     }
-}
+};
+
+
+
+//Home page button functionality
+
+$("#host-btn").on("click", function (event) {
+    window.location.href = "/host";
+});
+
+$("#browse-btn").on("click", function (event) {
+    window.location.href = "/browse";
+});
+
+$("#search-btn").on("click", function (event) {
+    window.location.href = "/search";
+});
