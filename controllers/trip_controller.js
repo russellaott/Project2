@@ -17,7 +17,7 @@ router.get("/browse", function (req, res) {
 
 router.post("/api/trip", function (req, res) {
     trip.create([
-        "departCity", "departState", "destinationCity", "destinationState", "dt", "smoking", "details"
+        "departCity", "departState", "destinationCity", "destinationState", "dt", "smoking", "seats", "details"
     ], [
         req.body.departCity, 
         req.body.departState, 

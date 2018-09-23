@@ -45,7 +45,7 @@ function ageVer() {
     }
 }
 
-// $(function () {
+$(function () {
     $("#joinTrip").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
@@ -55,11 +55,12 @@ function ageVer() {
         };
 
         $.ajax("/api/trip/" + id, {
-            method: "PUT",
+            type: "PUT",
             data: seatsUpdate
         }).then(function () {
             console.log("The seats have been updated..");
             location.reload();
+            alert("The seats for this trip have been updated");
         });
     })
-// });
+});
