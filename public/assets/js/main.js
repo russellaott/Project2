@@ -84,3 +84,4 @@ $("#search-btn").on("click", function (event) {
 $("#home-btn").on("click", function (event) {
     window.location.href = "/home";
 });
+
