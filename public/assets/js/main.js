@@ -3,6 +3,7 @@
 var verMonth = ""
 var verDay = ""
 var verYear = ""
+var matches = [];
 
 $("#ver-submit").on("click", function (event) {
     event.preventDefault();
@@ -127,7 +128,7 @@ $("#host-submit").on("click", function (event) {
 });
 
 //search functionality
-$("#submit-search").on("click" , function(event){
+$("#submit-search").on("click", function (event) {
     event.preventDefault();
 
     var searchDepCity = $("#dep-city").val().trim();
@@ -139,26 +140,67 @@ $("#submit-search").on("click" , function(event){
 
     $.ajax("/api/trip", {
         type: "GET",
-        success : function(text){
+        success: function (text) {
             response = text;
         }
-    }).then(function(){
+    }).then(function () {
         console.log(response.trip.length);
-        
-        for(var i = 0 ; i < response.trip.length ; i++){
-            console.log(response.trip[i]);
-                var depCity = response.trip[i].departCity;
-                var depState = response.trip[i].departState;
-                var arrCity = response.trip[i].destinationCity;
-                var arrState = response.trip[i].destinationState;
 
-                if((depCity === searchDepCity) && (depState === searchDepState) && (arrCity === searchArrCity) && (arrState === searchArrState)){
-                    console.log("MATCH: " + response.trip[i]);
-                    var newCard = $('<div class="card">');
-                    var newCardBody = $('<div class="card-body">');
-                    var newCardTitle = $('')
-                }
-        }
-        
+        for (var i = 0; i < response.trip.length; i++) {
+            console.log(response.trip[i]);
+            var depCity = response.trip[i].departCity;
+            var depState = response.trip[i].departState;
+            var arrCity = response.trip[i].destinationCity;
+            var arrState = response.trip[i].destinationState;
+
+            if ((depCity === searchDepCity) && (depState === searchDepState) && (arrCity === searchArrCity) && (arrState === searchArrState)) {
+                console.log("MATCH: " + response.trip[i]);
+                var matchTrip = response.trip[i];
+                matches.push(matchTrip);
+            };
+            console.log(matches);
+        };
+        createCard();
     });
-})
+});
+
+function createCard() {
+    console.log("Creating Card!");
+    console.log(matches.length);
+
+    var newTitleCard = $('<div class="card my-5">');
+    var newTitleCardBody = $('<div class="card-body">');
+    var newCardTitle = $('<h5 class="card-title">').text("Matching Trips...");
+
+    newTitleCardBody.append(newCardTitle);
+    newTitleCard.append(newTitleCardBody);
+    $("#match-results").append(newTitleCard);
+
+    for (var i = 0; i < matches.length; i++) {
+        var smokingValid = ""
+        
+        if(matches[i].smoking === 0){
+            smokingValid = "No Smoking in vehicle"
+        }
+        else if(matches[i].smoking === 1){
+            smokingValid = "Smoking allowed in vehicle"
+        };
+
+        var newTripCard = $('<div class="card">');
+        var newTripCardBody = $('<div class="card-body">');
+        var newCardDate = $('<h5 class="card-title">').text(matches[i].dt);
+        var newCardFromTo = $('<h6 class="card-subtitle mb-2 text-muted">').text(matches[i].departCity + " , " + matches[i].departState + "  -to-  " + matches[i].destinationCity + " , " + matches[i].destinationState);
+        var newCardSmoking = $('<p class="card-text">').text(smokingValid);
+        var newCardSeats = $('<p class="card-text">').text(matches[i].seats);
+        var newCardDetails = $('<p class="card-text">').text(matches[i].details);
+
+        newTripCardBody.append(newCardDate);
+        newTripCardBody.append(newCardFromTo);
+        newTripCardBody.append(newCardSmoking);
+        newTripCardBody.append(newCardSeats);
+        newTripCardBody.append(newCardDetails);
+        newTripCard.append(newTripCardBody);
+        $("#match-results").append(newTripCard);
+
+    }
+}
