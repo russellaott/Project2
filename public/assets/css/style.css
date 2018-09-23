@@ -31,7 +31,7 @@
 }
 
 #nav-btn-container{
-    background: rgba(207, 95, 114);
+    background:  rgb(230, 116, 10);
     padding: 10px;
 }
 
@@ -51,10 +51,12 @@
 
 #index-subtxt{
     margin-left: 40px;
+    color: white;
 }
 
 #index-subsubtxt{
     margin-left: 40px;
+    color: white;
 }
 
 
@@ -65,7 +67,7 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color: black;
+    color: white;
 }
 
 #search-background{
