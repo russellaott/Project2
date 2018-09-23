@@ -12,6 +12,10 @@
  border-radius: 0px;
 }
 
+#host-submit{
+ border-radius: 0px;
+}
+
 #ver-background{
     background-image: url(../img/bwbg2.jpg);
     background-size: cover;

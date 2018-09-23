@@ -85,3 +85,31 @@ $("#home-btn").on("click", function (event) {
     window.location.href = "/home";
 });
 
+$("#host-submit").on("click" , function (event){
+    event.preventDefault();
+    
+    var newDepMonth = $("#host-dep-month").val().trim();
+    var newDepDay = $("#host-dep-day").val().trim();
+    var newDepYear = $("#host-dep-year").val().trim();
+    var newDepDate = newDepYear + "-" + newDepMonth + "-" + newDepDay;
+    var newSeats = parseInt($("#host-seats").val().trim());
+    var newSmoking = parseInt($("#host-smoking").val().trim());
+    var newDepCity = $("#host-dep-city").val().trim();
+    var newDepState = $("#host-dep-state").val().trim();
+    var newArrCity = $("#host-arr-city").val().trim();
+    var newArrState = $("#host-arr-state").val().trim();
+    var newTripDetails = $("#host-trip-details").val();
+
+    var newTrip = {
+        departCity: newDepCity,
+        departState: newDepState,
+        destinationCity: newArrCity,
+        destinationState: newArrState,
+        dt: newDepDate,
+        smoking: newSmoking,
+        seats: newSeats,
+        details: newTripDetails
+    };
+
+    console.log(newTrip);
+});

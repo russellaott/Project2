@@ -56,9 +56,10 @@
                 </form>
             </div>
              <div class="col-md-3" id="form-smoking">
-                 <form>
-                    <input class="form-control" type="number" name="seats" id="host-seats">
-                </form>
+                 <select name="smoking" class="form-control" id="host-smoking">
+                            <option value="1">Allowed</option>
+                            <option value="0">Not in my car</option>
+                </select>
             </div>
         </div>
 
@@ -129,6 +130,4 @@
     </div>
 </div>
 
-<button type="submit" class="btn btn-dark btn-lg btn-block" id="host-submit">
-    <i class="fa fa-check-circle" aria-hidden="true"></i>
-    Submit Your Trip</button>
+<button type="submit" class="btn btn-dark btn-lg btn-block" id="host-submit">Submit Your Trip</button>
