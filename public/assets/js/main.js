@@ -168,7 +168,7 @@ function createCard() {
     console.log("Creating Card!");
     console.log(matches.length);
 
-    var newTitleCard = $('<div class="card my-5">');
+    var newTitleCard = $('<div class="card mt-5 mb-2">');
     var newTitleCardBody = $('<div class="card-body">');
     var newCardTitle = $('<h5 class="card-title">').text("Matching Trips...");
 
@@ -186,12 +186,14 @@ function createCard() {
             smokingValid = "Smoking allowed in vehicle"
         };
 
+        var formattedDate = moment(matches[i].dt).format('MMMM Do YYYY');
+
         var newTripCard = $('<div class="card">');
         var newTripCardBody = $('<div class="card-body">');
-        var newCardDate = $('<h5 class="card-title">').text(matches[i].dt);
-        var newCardFromTo = $('<h6 class="card-subtitle mb-2 text-muted">').text(matches[i].departCity + " , " + matches[i].departState + "  -to-  " + matches[i].destinationCity + " , " + matches[i].destinationState);
+        var newCardDate = $('<h5 class="card-title">').text(formattedDate);
+        var newCardFromTo = $('<h6 class="card-subtitle mb-2 text-muted">').text(matches[i].departCity + "," + matches[i].departState + "  -to-  " + matches[i].destinationCity + "," + matches[i].destinationState);
         var newCardSmoking = $('<p class="card-text">').text(smokingValid);
-        var newCardSeats = $('<p class="card-text">').text(matches[i].seats);
+        var newCardSeats = $('<p class="card-text">').text("Seats available: " + matches[i].seats);
         var newCardDetails = $('<p class="card-text">').text(matches[i].details);
 
         newTripCardBody.append(newCardDate);

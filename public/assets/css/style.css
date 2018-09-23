@@ -53,6 +53,23 @@
     
 }
 
+#header-text{
+    font-size: 72px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(0, 61, 10);
+}
+
+#to{
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(0, 61, 10);
+    font-weight: bold;
+}
+
+#search-subtxt{
+    fontsize: 32px;
+    color: rgb(0, 39, 7);
+}
+
 #index-subtxt{
     margin-left: 40px;
     color: white;
@@ -75,19 +92,20 @@
 }
 
 #search-background{
-    background-image: url(../img/road-trip-sign.jpg);
+    background-image: url(../img/retro-sign.jpg);
     background-size: cover;
-    height: 720px;
+    height: 500px;
 }
 
 #search-jumbo{
-    background: rgba(238, 238, 238, 0.884);
+    background: rgba(250, 240, 206, 0.658);
     margin-block-end: 0;
     margin-bottom: 0px;
+    height: 500px;
 }
 
 #search-nav{
-    background: rgba(70, 69, 69);
+    background:rgb(0, 61, 10);
     padding: 10px;
 }
 
@@ -108,6 +126,11 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color:black;
-    font-size: 24px;
+    color:rgb(0, 39, 7);
+    font-size: 32px;
+}
+
+#match-results{
+    padding-left: 50px;
+    padding-right: 50px;
 }
