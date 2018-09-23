@@ -19,14 +19,14 @@
             <div class="row mx-5 my-3" id="DOB-row">
                 <div class="col-md-3">
                     <form>
-                        <input class="form-control" type="text" name="dep-city" id="dep-city-input" placeholder="City">
+                        <input class="form-control" type="text" name="dep-city" id="dep-city" placeholder="City">
                     </form>
                 </div>
                 <div class="col-md-2">
                     <form>
                         <select name="states" class="form-control" id="dep-state">
                             {{#each states}}
-                            <option value="{{name}}">{{abbreviation}}</option>
+                            <option value="{{abbreviation}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
@@ -36,14 +36,14 @@
                 </div>
                 <div class="col-md-3">
                     <form>
-                        <input class="form-control" type="text" name="arr-city" id="arr-city-input" placeholder="City">
+                        <input class="form-control" type="text" name="arr-city" id="arr-city" placeholder="City">
                     </form>
                 </div>
                 <div class="col-md-2">
                     <form>
-                         <select name="states" class="form-control" id="arr-state">
+                        <select name="states" class="form-control" id="arr-state">
                             {{#each states}}
-                            <option value="{{name}}">{{abbreviation}}</option>
+                            <option value="{{abbreviation}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
@@ -69,6 +69,21 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid" id="match-results">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Date</h5>
+                <h6 class="card-subtitle mb-2 text-muted">DepCity,DepState -to- ArrCity,ArrState</h6>
+                <p class="card-text">seats avalable</p>
+                <p class="card-text">smoking</p>
+                <p class="card-text">trip details</p>
+                <a href="#" class="card-link">join</a>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="" async defer></script>

@@ -35,7 +35,7 @@ function ageVer() {
     var month = parseInt(todayMonth) - parseInt(verMonth);
     var day = parseInt(todayDay) - parseInt(verDay);
 
-    if(year < 18){
+    if (year < 18) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -43,7 +43,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else if(month < 0){
+    else if (month < 0) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -51,7 +51,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else if(day < 0){
+    else if (day < 0) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -59,7 +59,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else{
+    else {
         window.location.href = "/home";
         console.log("User is 18")
     }
@@ -85,9 +85,11 @@ $("#home-btn").on("click", function (event) {
     window.location.href = "/home";
 });
 
-$("#host-submit").on("click" , function (event){
+
+//host functionality to add trip on submit
+$("#host-submit").on("click", function (event) {
     event.preventDefault();
-    
+
     var newDepMonth = $("#host-dep-month").val().trim();
     var newDepDay = $("#host-dep-day").val().trim();
     var newDepYear = $("#host-dep-year").val().trim();
@@ -111,5 +113,52 @@ $("#host-submit").on("click" , function (event){
         details: newTripDetails
     };
 
-    console.log(newTrip);
+    $.ajax("/api/trip", {
+        type: "POST",
+        data: newTrip
+    }).then(
+        function () {
+            console.log("Created new trip!");
+            console.log(newTrip);
+
+            //ADD SWAL!
+        }
+    )
 });
+
+//search functionality
+$("#submit-search").on("click" , function(event){
+    event.preventDefault();
+
+    var searchDepCity = $("#dep-city").val().trim();
+    var searchDepState = $("#dep-state").val().trim();
+    var searchArrCity = $("#arr-city").val().trim();
+    var searchArrState = $("#arr-state").val().trim();
+
+    console.log("Searching trips leaving from: " + searchDepCity + "," + searchDepState + " and going to: " + searchArrCity + "," + searchArrState + "...");
+
+    $.ajax("/api/trip", {
+        type: "GET",
+        success : function(text){
+            response = text;
+        }
+    }).then(function(){
+        console.log(response.trip.length);
+        
+        for(var i = 0 ; i < response.trip.length ; i++){
+            console.log(response.trip[i]);
+                var depCity = response.trip[i].departCity;
+                var depState = response.trip[i].departState;
+                var arrCity = response.trip[i].destinationCity;
+                var arrState = response.trip[i].destinationState;
+
+                if((depCity === searchDepCity) && (depState === searchDepState) && (arrCity === searchArrCity) && (arrState === searchArrState)){
+                    console.log("MATCH: " + response.trip[i]);
+                    var newCard = $('<div class="card">');
+                    var newCardBody = $('<div class="card-body">');
+                    var newCardTitle = $('')
+                }
+        }
+        
+    });
+})
