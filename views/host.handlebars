@@ -12,81 +12,120 @@
             </div>
         </div>
 
-        {{!-- Form goes below --}}
-        <div class="row mx-5 mt-5">
-            <div class="col-md-8">
-     <h6>Departure Date</h6>
-            </div>
+        <div class="row">
+            <div class="col-md-1"></div>
 
-            <div class="col-md-4">
-                <h6>Number of available seats</h6>
+            <div class="col-md-10">
+
+
+        <div class="row mt-5 mx-3">
+            <div class="col-md-6">
+                <h6>Date of departure</h6>
             </div>
-           
-        </div>
-        <div class="row mx-5 mt-3">
-            <div class="col-md-2">
-                <form>
-                    <input class="form-control mx-3" type="number" name="month" min="1" max="12" id="dep-month-input" placeholder="MM">
-                </form>
-            </div>
-            <div class="col-md-2">
-                <form>
-                    <input class="form-control mx-3" type="number" name="month" min="1" max="31" id="dep-day-input" placeholder="DD">
-                </form>
-            </div>
-            <div class="col-md-2">
-                <form>
-                    <input class="form-control mx-3" type="number" name="year" min="2018" max="2019" id="dep-year-input" placeholder="YYYY">
-                </form>
-            </div>
-              <div class="col-md-2"></div>
-              <div class="col-md-2">
-                <form>
-                    <input class="form-control mx-3" type="number" name="seats" id="seats-avail">
-                </form>
-            </div>
-        </div>
- <div class="row mx-5 mt-5">
             <div class="col-md-3">
-            <h6>Leaving from...</h6>
+                <h6>Extra Seats</h6>
             </div>
-            <div class="col-md-4"></div>
             <div class="col-md-3">
-            <h6>Going to...</h6>
+                <h6>Smoking?</h6>
             </div>
         </div>
-        <div class="row mx-5">
-              <div class="col-md-3">
+
+        <div class="row mt-3 mx-5">
+            <div class="col-md-6" id="form-date">
+                <div class="row">
+                    <div class="col-md-4" id="form-month">
+                <form>
+                    <input class="form-control" type="number" name="month" min="1" max="12" id="host-dep-month" placeholder="MM">
+                </form>
+            </div>
+            <div class="col-md-4" id="form-day">
+                <form>
+                    <input class="form-control" type="number" name="day" min="1" max="31" id="host-dep-day" placeholder="DD">
+                </form>
+            </div>
+            <div class="col-md-4" id="form-year">
+                <form>
+                    <input class="form-control" type="number" name="year" min="1900" max="2018" id="host-dep-year" placeholder="YYYY">
+                </form>
+            </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="form-seats">
+                 <form>
+                    <input class="form-control" type="number" name="seats" id="host-seats">
+                </form>
+            </div>
+             <div class="col-md-3" id="form-smoking">
+                 <form>
+                    <input class="form-control" type="number" name="seats" id="host-seats">
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5 mx-3">
+            <div class="col-md-6">
+                <h6>Leaving from...</h6>
+            </div>
+            <div class="col-md-6">
+                <h6>Going to...</h6>
+            </div>
+        </div>
+
+        <div class="row mt-3 mx-5">
+            <div class="col-md-6">
+                <div class="row">
+                     <div class="col-md-8">
                     <form>
-                        <input class="form-control mx-3" type="text" name="dep-city" id="dep-city-input" placeholder="City">
+                        <input class="form-control" type="text" name="arr-city" id="host-dep-city" placeholder="City">
                     </form>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <form>
-                        <select name="states" class="form-control mx-3" id="dep-state">
+                         <select name="states" class="form-control" id="host-dep-state">
                             {{#each states}}
                             <option value="{{name}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
                 </div>
-                <div class="col-md-2">
                 </div>
-                <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                     <div class="col-md-8">
                     <form>
-                        <input class="form-control mx-3" type="text" name="arr-city" id="arr-city-input" placeholder="City">
+                        <input class="form-control" type="text" name="arr-city" id="host-arr-city" placeholder="City">
                     </form>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <form>
-                         <select name="states" class="form-control mx-3" id="arr-state">
+                         <select name="states" class="form-control" id="host-arr-state">
                             {{#each states}}
                             <option value="{{name}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
                 </div>
+                </div>
+            </div>
         </div>
+
+        <div class="row mt-5 mx-3">
+            <div class="col-md-12">
+                <h6>Trip Details</h6>
+            </div>
+        </div>
+
+        <div class="row mt-3 mx-5">
+            <div class="col-md-12">
+                <textarea class="form-control" id="host-trip-details" rows="5" placeholder="Meeting spot, pit stops, meeting time, etc."></textarea>
+            </div>
+        </div>
+
+</div>
+<div class="col-md-1"></div>
+</div>
+
     </div>
 </div>
 
