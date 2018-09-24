@@ -21,9 +21,9 @@ var trip = {
         orm.delete("trip", objColVals, condition, function(res) {
             cb(res);
         });
-    }, 
-    searchTrip: function(colOne, valueOne, colTwo, valueTwo, colThree, valThree, colFour, valFour, cb) {
-        orm.searchTrip("trip", colOne, valueOne, colTwo, valueTwo, colThree, valThree, colFour, valFour, function(res) {
+    },
+    searchTrip: function(colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour , cb) {
+        orm.searchTrip("trip" , colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour ,function(res){
             cb(res);
         })
     }

@@ -26,10 +26,6 @@ router.get("/search", function(req, res) {
             "abbreviation": "AK"
         },
         {
-            "name": "American Samoa",
-            "abbreviation": "AS"
-        },
-        {
             "name": "Arizona",
             "abbreviation": "AZ"
         },
@@ -54,24 +50,12 @@ router.get("/search", function(req, res) {
             "abbreviation": "DE"
         },
         {
-            "name": "District Of Columbia",
-            "abbreviation": "DC"
-        },
-        {
-            "name": "Federated States Of Micronesia",
-            "abbreviation": "FM"
-        },
-        {
             "name": "Florida",
             "abbreviation": "FL"
         },
         {
             "name": "Georgia",
             "abbreviation": "GA"
-        },
-        {
-            "name": "Guam",
-            "abbreviation": "GU"
         },
         {
             "name": "Hawaii",
@@ -108,10 +92,6 @@ router.get("/search", function(req, res) {
         {
             "name": "Maine",
             "abbreviation": "ME"
-        },
-        {
-            "name": "Marshall Islands",
-            "abbreviation": "MH"
         },
         {
             "name": "Maryland",
@@ -174,10 +154,6 @@ router.get("/search", function(req, res) {
             "abbreviation": "ND"
         },
         {
-            "name": "Northern Mariana Islands",
-            "abbreviation": "MP"
-        },
-        {
             "name": "Ohio",
             "abbreviation": "OH"
         },
@@ -190,16 +166,8 @@ router.get("/search", function(req, res) {
             "abbreviation": "OR"
         },
         {
-            "name": "Palau",
-            "abbreviation": "PW"
-        },
-        {
             "name": "Pennsylvania",
             "abbreviation": "PA"
-        },
-        {
-            "name": "Puerto Rico",
-            "abbreviation": "PR"
         },
         {
             "name": "Rhode Island",
@@ -228,10 +196,6 @@ router.get("/search", function(req, res) {
         {
             "name": "Vermont",
             "abbreviation": "VT"
-        },
-        {
-            "name": "Virgin Islands",
-            "abbreviation": "VI"
         },
         {
             "name": "Virginia",

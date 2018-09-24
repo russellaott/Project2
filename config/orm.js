@@ -34,7 +34,16 @@ var orm = {
             cb(res);
         });
     }, 
-    
+
+    searchTrip: function(tableInput , colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour , cb){
+        var queryString = "SELECT * FROM "+ tableInput + " WHERE "+ colOne + " = "+ valueOne + " AND WHERE "+ colTwo +" = "+ valueTwo 
+        +" AND WHERE "+ colThree +" = "+ valueThree +" AND WHERE "+ colFour +" = "+ valueFour ;
+        connection.query(queryString , function (err , res){
+            if (err) throw err;
+            cb(res);
+        })
+    },
+
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 

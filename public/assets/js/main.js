@@ -35,7 +35,7 @@ function ageVer() {
     var month = parseInt(todayMonth) - parseInt(verMonth);
     var day = parseInt(todayDay) - parseInt(verDay);
 
-    if(year < 18){
+    if (year < 18) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -43,7 +43,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else if(month < 0){
+    else if (month < 0) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -51,7 +51,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else if(day < 0){
+    else if (day < 0) {
         swal({
             icon: "error",
             title: "ERROR",
@@ -59,7 +59,7 @@ function ageVer() {
             button: "Ok"
         });
     }
-    else{
+    else {
         window.location.href = "/home";
         console.log("User is 18")
     }
@@ -85,36 +85,55 @@ $("#home-btn").on("click", function (event) {
     window.location.href = "/home";
 });
 
-$(function () {
-    $("#joinTrip").on("click", function (event) {
-        event.preventDefault();
-        var id = $(this).data("id");
-        //var userInput = $(this).data(parseInt("#joinTrip"))
-        var seatsUpdate = {
-            seats: parseInt(seats - 1)
-        };
+$(".joinTrip").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).data("id");
+    var seats = $(this).data("seats");
+    var updatedSeats = {
+        seats: -1 
+    };
 
-        $.ajax("/api/trip/" + id, {
-            type: "PUT",
-            data: seatsUpdate
-        }).then(function () {
-            console.log("The seats have been updated..");
-            location.reload();
-            alert("The seats for this trip have been updated");
-        });
+    $.ajax({
+        url: window.location.origin + "/api/trip/" + id,
+        type: "PUT",
+        data: updatedSeats,
+    }).then(function () {
+        //console.log("The seats have been updated..");
+        if (seats > 0) {
+            swal({
+                title: "Awesome!",
+                text: "You've saved your seat and have been added to the roadtrip.",
+                icon: "success",
+            });
+        }
+        else {
+            swal({
+                title: "Sorry!",
+                text: "There are no more seats available for this trip.",
+                icon: "warning",
+            });
+        }
+
     })
-});
+})
 
-$(function() {
-    $("submit-search").on("click", function (event) {
-        event.preventDefault();
-        $.ajax({
-            type: "GET", 
-            url: "/search/" + depCityInput, 
-            success: function(result){
-                window.location.reload(true);
-            }
-        })
+$("#submit-search").on("click", function (event) {
+    event.preventDefault();
+
+    var searchDepCity = $("#dep-city").val().trim();
+    var searchDepState = $("#dep-state").val().trim();
+    var searchArrCity = $("arr-city").val().trim();
+    var searchArrState = $("arr-state").val().trim();
+
+    console.log("Searching trips leaving from: " + searchDepCity + "," + searchDepState + " and going to: " + searchArrCity + "," + searchArrState + ".");
+
+    $.ajax("/api/trip", {
+        type: "GET",
+        success: function (text) {
+            response = text;
+        }
+    }).then(function () {
+        console.log(response.trip);
     })
 })
 

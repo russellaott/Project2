@@ -31,7 +31,11 @@
 }
 
 #nav-btn-container{
+<<<<<<< HEAD
     background: rgba(207, 95, 114);
+=======
+    background:  rgb(230, 116, 10);
+>>>>>>> f054c287231e3100a4df0afa45aff86529d70739
     padding: 10px;
 }
 
@@ -51,10 +55,18 @@
 
 #index-subtxt{
     margin-left: 40px;
+<<<<<<< HEAD
+=======
+    color: white;
+>>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 #index-subsubtxt{
     margin-left: 40px;
+<<<<<<< HEAD
+=======
+    color: white;
+>>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 
@@ -65,7 +77,11 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
+<<<<<<< HEAD
     color: black;
+=======
+    color: white;
+>>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 #search-background{
