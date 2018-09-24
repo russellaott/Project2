@@ -107,3 +107,26 @@
     color:black;
     font-size: 24px;
 }
+.trip-card {
+    border: solid black 1px;
+    float: left;
+    background-color: white;
+    margin: 20px;
+}
+
+.trip-card-title {
+    text-align: center;
+}
+
+.trip-details {
+    background-color: #F8F8FF;
+    padding: 10px;
+}
+
+.trip-card-text {
+    text-align: center;
+}
+
+.joinTrip {
+
+}
