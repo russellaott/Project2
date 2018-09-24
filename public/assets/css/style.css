@@ -31,11 +31,7 @@
 }
 
 #nav-btn-container{
-<<<<<<< HEAD
-    background: rgba(207, 95, 114);
-=======
     background:  rgb(230, 116, 10);
->>>>>>> f054c287231e3100a4df0afa45aff86529d70739
     padding: 10px;
 }
 
@@ -55,18 +51,12 @@
 
 #index-subtxt{
     margin-left: 40px;
-<<<<<<< HEAD
-=======
     color: white;
->>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 #index-subsubtxt{
     margin-left: 40px;
-<<<<<<< HEAD
-=======
     color: white;
->>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 
@@ -77,11 +67,7 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
-<<<<<<< HEAD
-    color: black;
-=======
     color: white;
->>>>>>> f054c287231e3100a4df0afa45aff86529d70739
 }
 
 #search-background{
@@ -120,4 +106,27 @@
     outline:none;
     color:black;
     font-size: 24px;
+}
+.trip-card {
+    border: solid black 1px;
+    float: left;
+    background-color: white;
+    margin: 20px;
+}
+
+.trip-card-title {
+    text-align: center;
+}
+
+.trip-details {
+    background-color: #F8F8FF;
+    padding: 10px;
+}
+
+.trip-card-text {
+    text-align: center;
+}
+
+.joinTrip {
+
 }
