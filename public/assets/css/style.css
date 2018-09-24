@@ -12,28 +12,96 @@
  border-radius: 0px;
 }
 
-.jumbotron {
-    background: rgba(207, 95, 114, 0.411);
+#ver-background{
+    background-image: url(../img/bwbg2.jpg);
+    background-size: cover;
+    height: 730px;
+}
+
+#ver-jumbo{
+    opacity: 0.75;
+    margin-bottom: 0px;
     margin-block-end: 0;
 }
 
-body {
-    background-image: url(https://itsreallykita.com/winter2016/wp-content/uploads/2017/05/bigstock-Group-of-happy-young-friends-i-170106395.jpg);
-    background-size: auto;
+#main-jumbo {
+    background: rgba(207, 95, 114, 0.411);
+    margin-block-end: 0;
+    margin-bottom: 0px;
 }
 
-h1 {
-    font-size: 80px;
-    font-family: 'Indie Flower', cursive;
+#nav-btn-container{
+    background: rgba(207, 95, 114);
+    padding: 10px;
+}
+
+#home-background {
+    background-image: url(https://itsreallykita.com/winter2016/wp-content/uploads/2017/05/bigstock-Group-of-happy-young-friends-i-170106395.jpg);
+    background-size: auto;
+    height: 720px;
+}
+
+#app-name {
+    font-size: 100px;
+    font-family: 'Quicksand', sans-serif;
     color: rgb(230, 116, 10);
+    margin-bottom: 0px;
     
 }
 
-button {
+#index-subtxt{
+    margin-left: 40px;
+}
+
+#index-subsubtxt{
+    margin-left: 40px;
+}
+
+
+.main-btn {
     background-color: transparent;
     background-repeat:no-repeat;
     border: none;
     cursor: pointer;
     overflow: hidden;
     outline:none;
+    color: black;
+}
+
+#search-background{
+    background-image: url(../img/road-trip-sign.jpg);
+    background-size: cover;
+    height: 720px;
+}
+
+#search-jumbo{
+    background: rgba(238, 238, 238, 0.884);
+    margin-block-end: 0;
+    margin-bottom: 0px;
+}
+
+#search-nav{
+    background: rgba(70, 69, 69);
+    padding: 10px;
+}
+
+.search-btn{
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+}
+
+#submit-search{
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color:black;
+    font-size: 24px;
 }

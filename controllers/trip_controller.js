@@ -15,6 +15,16 @@ router.get("/browse", function (req, res) {
     });
 });
 
+router.get("/api/trip", function(req, res) {
+    trip.all(function (data) {
+       var hbsObject = {
+           trip: data
+       };
+       console.log(hbsObject);
+       return res.json(hbsObject);
+    });
+});
+
 router.post("/api/trip", function (req, res) {
     trip.create([
         "departCity", "departState", "destinationCity", "destinationState", "dt", "smoking", "seats", "details"
