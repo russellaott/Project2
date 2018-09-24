@@ -25,20 +25,47 @@
 }
 
 #main-jumbo {
-    background: rgba(207, 95, 114, 0.411);
+    background: rgba(207, 131, 95, 0.582);
     margin-block-end: 0;
     margin-bottom: 0px;
 }
 
 #nav-btn-container{
-    background: rgba(207, 95, 114);
+    background: rgba(207, 131, 95, 0.582);
     padding: 10px;
+    
 }
 
 #home-background {
     background-image: url(https://itsreallykita.com/winter2016/wp-content/uploads/2017/05/bigstock-Group-of-happy-young-friends-i-170106395.jpg);
     background-size: auto;
     height: 720px;
+}
+
+#browse-background {
+background-image: url(http://www.tandemturners.com/wp-content/uploads/2011/09/southwest-desert-road-1024x768.jpg);
+background-size: auto;
+background-repeat: no-repeat;
+background-size: cover;
+height: 720px;
+}
+
+#browse-jumbo {
+    background:  rgba(95, 207, 183, 0.582);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    height: 360px;
+}
+
+#browse-nav {
+    background: rgba(95, 207, 183, 0.582);  
+  
+}
+
+#browse-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
 }
 
 #app-name {
@@ -92,7 +119,7 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color: white;
+    color: black;
 }
 
 #submit-search{
@@ -104,4 +131,24 @@
     outline:none;
     color:black;
     font-size: 24px;
+}
+
+#host-jumbo {
+    background:  rgba(243, 149, 72, 0.582);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    height: 360px;
+}
+
+#host-background {
+background-image: url(http://images6.fanpop.com/image/photos/41400000/A-road-and-lighthouse-along-the-Oregon-Coast-at-sunset-sample-pictures-41407757-1920-1200.jpg);    
+background-size: auto;
+background-repeat: no-repeat;
+background-size: cover;
+height: 720px;
+}
+
+#host-nav {
+    background:  rgba(243, 149, 72, 0.582);
+    padding: 10px;  
 }

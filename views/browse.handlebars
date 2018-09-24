@@ -1,10 +1,29 @@
-<div class="row">
-    <div class="col-4">
+<div id="browse-background">
+
+<div class="jumbotron jumbotron-fluid" id="browse-jumbo">
+
+        <div class="container">
+
+            <h1 id="browse-title">Browse a list of trips already hosted</h1>
+            
+           
+
+        </div>
+
+
     </div>
 
-    <div class="col-4">
-        {{#each trip}} {{>trips/trip-block}} {{/each}}
+       <div class="container-fluid text-center" id="browse-nav">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="search-btn" id="home-btn">Go Home</button>
+            </div>
+            <div class="col-md-4">
+                <button class="search-btn" id="host-btn">Host A Trip</button>
+            </div>
+              <div class="col-md-4">
+                    <button class="main-btn" id="search-btn">Search A Trip</button>
+                </div>
+            
+        </div>
     </div>
-
-    <div class="col-4"></div>
-</div>
