@@ -185,7 +185,7 @@ function createCard() {
         else if(matches[i].smoking === 1){
             smokingValid = "Smoking allowed in vehicle"
         };
-
+        var buttonId = "join" + [i];
         var formattedDate = moment(matches[i].dt).format('MMMM Do YYYY');
 
         var newTripCard = $('<div class="card">');
@@ -195,14 +195,16 @@ function createCard() {
         var newCardSmoking = $('<p class="card-text">').text(smokingValid);
         var newCardSeats = $('<p class="card-text">').text("Seats available: " + matches[i].seats);
         var newCardDetails = $('<p class="card-text">').text(matches[i].details);
+        var newCardJoin = $('<button id="' + buttonId + '">').html("join");
 
         newTripCardBody.append(newCardDate);
         newTripCardBody.append(newCardFromTo);
         newTripCardBody.append(newCardSmoking);
         newTripCardBody.append(newCardSeats);
         newTripCardBody.append(newCardDetails);
+        newTripCardBody.append(newCardJoin);
         newTripCard.append(newTripCardBody);
         $("#match-results").append(newTripCard);
 
-    }
-}
+    };
+};
