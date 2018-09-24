@@ -90,7 +90,7 @@ $(".joinTrip").on("click", function (event) {
     var id = $(this).data("id");
     var seats = $(this).data("seats");
     var updatedSeats = {
-        seats: -1 
+        seats: seats -1 
     };
 
     $.ajax({
@@ -98,7 +98,7 @@ $(".joinTrip").on("click", function (event) {
         type: "PUT",
         data: updatedSeats,
     }).then(function () {
-        //console.log("The seats have been updated..");
+        console.log("The seats have been updated..");
         if (seats > 0) {
             swal({
                 title: "Awesome!",

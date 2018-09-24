@@ -6,7 +6,6 @@ USE project2_db;
 CREATE TABLE trip
 (
 	id int NOT NULL AUTO_INCREMENT,
-	seatsAvailable INTEGER (10) NOT NULL,
 	departCity varchar(50) NOT NULL,
 	departState VARCHAR (10) NOT NULL,
 	destinationCity VARCHAR (50) NOT NULL,
