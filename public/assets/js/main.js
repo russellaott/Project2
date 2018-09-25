@@ -299,7 +299,7 @@ $("#match-results").on("click" , ".join-btn" , function(event){
                     console.log("changed seats to: " + updatedSeats);
                     swal({
                         icon: "success",
-                        title: "TRIP POSTED!",
+                        title: "TRIP JOINED!",
                         showConfirmButton: true,
                         confirmButtonText: "OK",
                         closeOnConfirm: false
