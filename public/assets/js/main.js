@@ -90,12 +90,8 @@ $(".joinTrip").on("click", function (event) {
     var id = $(this).data("id");
     var seats = $(this).data("seats");
     var updatedSeats = {
-        seats: seats - 1 
+        seats: (seats - 1 )
     };
-//store current number of seats in variable
-//current minus onemptied
-//updated
-
     $.ajax({
         url: window.location.origin + "/api/trip/" + id,
         type: "PUT",
