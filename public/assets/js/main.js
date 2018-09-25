@@ -143,6 +143,45 @@ $("#host-submit").on("click", function (event) {
 });
 
 //search functionality
+$(".joinTrip").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).data("id");
+    var seats = $(this).data("seats");
+    console.log(seats);
+    var subtractSeats = parseInt(seats) - 1;
+    var updatedSeats = {
+        seats: subtractSeats
+    };
+
+    $.ajax({
+        url: window.location.origin + "/api/trip/" + id,
+        type: "PUT",
+        data: updatedSeats,
+    }).then(function () {
+        console.log("The seats have been updated..");
+        if (seats > 0) {
+            swal({
+                title: "You've Joined the Trip!",
+                text: "You've saved your seat and have been added to the roadtrip.",
+                icon: "success",
+                showConfirmButton: true, 
+                confirmButtonText: "Return to Homepage", 
+                closeOnConfirm: false
+            }).then(function(result) {
+                window.location = "/home";
+            })
+        }
+        if (seats === 0){
+            swal({
+                title: "Sorry!",
+                text: "There are no more seats available for this trip.",
+                icon: "warning",
+            });
+        }
+
+    })
+})
+
 $("#submit-search").on("click", function (event) {
     event.preventDefault();
 

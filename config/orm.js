@@ -36,7 +36,8 @@ var orm = {
     }, 
 
     searchTrip: function(tableInput , colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour , cb){
-        var queryString = "SELECT * FROM "+ tableInput + " WHERE "+ colOne + " = "+ valueOne + " AND WHERE "+ colTwo +" = "+ valueTwo +" AND WHERE "+ colThree +" = "+ valueThree +" AND WHERE "+ colFour +" = "+ valueFour ;
+        var queryString = "SELECT * FROM "+ tableInput + " WHERE "+ colOne + " = "+ valueOne + " AND WHERE "+ colTwo +" = "+ valueTwo 
+        +" AND WHERE "+ colThree +" = "+ valueThree +" AND WHERE "+ colFour +" = "+ valueFour ;
         connection.query(queryString , function (err , res){
             if (err) throw err;
             cb(res);
@@ -71,7 +72,7 @@ var orm = {
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
-
+        console.log(objColVals);
         console.log(queryString);
         connection.query(queryString, function(err, result) {
             if (err) {
