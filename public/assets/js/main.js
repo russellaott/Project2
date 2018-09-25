@@ -90,8 +90,11 @@ $(".joinTrip").on("click", function (event) {
     var id = $(this).data("id");
     var seats = $(this).data("seats");
     var updatedSeats = {
-        seats: seats -1 
+        seats: seats - 1 
     };
+//store current number of seats in variable
+//current minus onemptied
+//updated
 
     $.ajax({
         url: window.location.origin + "/api/trip/" + id,
@@ -103,7 +106,33 @@ $(".joinTrip").on("click", function (event) {
             swal({
                 title: "Awesome!",
                 text: "You've saved your seat and have been added to the roadtrip.",
-                icon: "success",
+                icon: "success", 
+                text: {
+                    buttons: {
+                        search: {
+                            text: "Search Trips", 
+                            value: "search"
+                        },
+                        home: {
+                            text: "Home", 
+                            value: "home"
+                        }
+                    }
+                }
+            }).then((value) => {
+                switch (value) {
+
+                    case "search":
+                    window.location.href = "/search"
+                    break;
+
+                    case "home":
+                    window.location.href = "/home"
+                    break;
+                    
+                    default: 
+                    window.location.href = "/home"
+                }
             });
         }
         else {
@@ -114,7 +143,7 @@ $(".joinTrip").on("click", function (event) {
             });
         }
 
-    })
+    });
 })
 
 $("#submit-search").on("click", function (event) {
