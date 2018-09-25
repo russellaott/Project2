@@ -132,8 +132,10 @@ $(".joinTrip").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
     var seats = $(this).data("seats");
+    console.log(seats);
+    var subtractSeats = parseInt(seats) - 1;
     var updatedSeats = {
-        seats: seats -1 
+        seats: subtractSeats
     };
 
     $.ajax({
@@ -144,12 +146,17 @@ $(".joinTrip").on("click", function (event) {
         console.log("The seats have been updated..");
         if (seats > 0) {
             swal({
-                title: "Awesome!",
+                title: "You've Joined the Trip!",
                 text: "You've saved your seat and have been added to the roadtrip.",
                 icon: "success",
-            });
+                showConfirmButton: true, 
+                confirmButtonText: "Return to Homepage", 
+                closeOnConfirm: false
+            }).then(function(result) {
+                window.location = "/home";
+            })
         }
-        else {
+        if (seats === 0){
             swal({
                 title: "Sorry!",
                 text: "There are no more seats available for this trip.",
@@ -210,11 +217,11 @@ function createCard() {
 
     for (var i = 0; i < matches.length; i++) {
         var smokingValid = ""
-        
-        if(matches[i].smoking === 0){
+
+        if (matches[i].smoking === 0) {
             smokingValid = "No Smoking in vehicle"
         }
-        else if(matches[i].smoking === 1){
+        else if (matches[i].smoking === 1) {
             smokingValid = "Smoking allowed in vehicle"
         };
         var buttonId = "join" + [i];
