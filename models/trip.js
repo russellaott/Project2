@@ -21,6 +21,11 @@ var trip = {
         orm.delete("trip", objColVals, condition, function(res) {
             cb(res);
         });
+    },
+    searchTrip: function(colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour , cb) {
+        orm.searchTrip("trip" , colOne , valueOne , colTwo , valueTwo , colThree , valueThree , colFour , valueFour ,function(res){
+            cb(res);
+        })
     }
 };
 // Export the database functions for the controller.

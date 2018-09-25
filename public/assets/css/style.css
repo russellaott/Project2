@@ -30,7 +30,8 @@
     margin-bottom: 0px;
 }
 
-#nav-btn-container{
+#home-nav{
+    color: black;
     background: rgba(207, 131, 95, 0.582);
     padding: 10px;
     
@@ -43,7 +44,7 @@
 }
 
 #browse-background {
-background-image: url(http://www.tandemturners.com/wp-content/uploads/2011/09/southwest-desert-road-1024x768.jpg);
+background-image: url(../img/southwest-desert-road-blackwhite1024x768.jpg);
 background-size: auto;
 background-repeat: no-repeat;
 background-size: cover;
@@ -51,14 +52,14 @@ height: 720px;
 }
 
 #browse-jumbo {
-    background:  rgba(95, 207, 183, 0.582);
+    background:  rgba(74, 156, 233, 0.603);
     margin-block-end: 0;
     margin-bottom: 0px;  
-    height: 360px;
+    height: 200px;
 }
 
 #browse-nav {
-    background: rgba(95, 207, 183, 0.582);  
+    background: rgba(74, 156, 233, 0.603);  
   
 }
 
@@ -78,10 +79,12 @@ height: 720px;
 
 #index-subtxt{
     margin-left: 40px;
+    color: white;
 }
 
 #index-subsubtxt{
     margin-left: 40px;
+    color: white;
 }
 
 
@@ -92,7 +95,7 @@ height: 720px;
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color: black;
+    color: white;
 }
 
 #search-background{
@@ -119,7 +122,7 @@ height: 720px;
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color: black;
+    color: white;
 }
 
 #submit-search{
@@ -129,7 +132,7 @@ height: 720px;
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color:black;
+    color: white;
     font-size: 24px;
 }
 
@@ -137,7 +140,7 @@ height: 720px;
     background:  rgba(243, 149, 72, 0.582);
     margin-block-end: 0;
     margin-bottom: 0px;  
-    height: 360px;
+    height: 200px;
 }
 
 #host-background {
