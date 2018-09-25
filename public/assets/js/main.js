@@ -161,21 +161,24 @@ $(".joinTrip").on("click", function (event) {
         console.log("The seats have been updated..");
         if (seats > 0) {
             swal({
-                title: "You've Joined the Trip!",
-                text: "You've saved your seat and have been added to the roadtrip.",
                 icon: "success",
-                showConfirmButton: true, 
-                confirmButtonText: "Return to Homepage", 
+                title: "TRIP JOINED!",
+                showConfirmButton: true,
+                confirmButtonText: "OK",
                 closeOnConfirm: false
-            }).then(function(result) {
+            }).then(function (result) {
                 window.location = "/home";
-            })
+            });
         }
         if (seats === 0){
             swal({
-                title: "Sorry!",
-                text: "There are no more seats available for this trip.",
-                icon: "warning",
+                icon: "error",
+                title: "TRIP FULL!",
+                showConfirmButton: true,
+                confirmButtonText: "OK",
+                closeOnConfirm: false
+            }).then(function (result) {
+                window.location = "/home";
             });
         }
 
@@ -275,21 +278,28 @@ function createCard() {
 
 $("#match-results").on("click" , ".join-btn" , function(event){
   var matchId = parseInt($(".join-btn").val());
-    console.log(matchId);
-    console.log(matches[0].id);
     for(var i = 0 ; i < matches.length ; i++){
+
         var tripId = parseInt(matches[i].id);
-        console.log(tripId);
-        console.log(matchId);
         if(matchId === tripId){
             var currentSeats = parseInt(matches[i].seats);
+
+            if (currentSeats < 1){
+                swal({
+                    icon: "error",
+                    title: "TRIP FULL!",
+                    showConfirmButton: true,
+                    confirmButtonText: "OK",
+                    closeOnConfirm: false
+                }).then(function (result) {
+                    window.location = "/home";
+                });
+            }
+            else{
             var updatedSeats = currentSeats - 1;
-            console.log(currentSeats);
-            console.log(updatedSeats);
             var newSeats = {
                 seats: updatedSeats
             };
-
             $.ajax({
                 url: window.location.origin + "/api/trip/" + tripId,
                 type: "PUT",
@@ -309,5 +319,7 @@ $("#match-results").on("click" , ".join-btn" , function(event){
                 }
             );
         };
+    };
+
     };
 });
