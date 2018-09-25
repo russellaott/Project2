@@ -3,6 +3,11 @@
     padding-right: 100px;
 }
 
+#host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
+}
+
 #ver-checkbox{
     float: right;
     margin-right: 150px;
@@ -14,6 +19,12 @@
 
 #host-submit{
  border-radius: 0px;
+ background: transparent;
+ font-weight: 500;
+ border-style: none;
+ padding-bottom: 20px;
+ color: white;
+
 }
 
 #ver-background{
@@ -142,11 +153,13 @@
     background-size: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 720px;
+    height: 790px;
     }
 
 #host-jumbo{
     background:  rgba(243, 149, 72, 0.432);
     margin-block-end: 0;
     margin-bottom: 0px;  
+    color: white;
+    height: 790px;
 }
