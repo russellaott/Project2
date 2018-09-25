@@ -47,14 +47,7 @@ router.put("/api/trip/:id", function (req, res) {
     console.log("Condition", condition);
 
     trip.update({
-        departCity: req.body.departCity, 
-        departState: req.body.departState, 
-        destinationCity: req.body.destinationCity, 
-        destinationState: req.body.destinationState, 
-        dt: req.body.dt, 
-        smoking: req.body.smoking, 
         seats: req.body.seats,
-        details: req.body.details
     }, condition, function (results) {
         if (results.changedRows === 0) {
             return res.status(404).end();

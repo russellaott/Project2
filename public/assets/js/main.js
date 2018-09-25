@@ -13,7 +13,6 @@ $("#ver-submit").on("click", function (event) {
     verYear = $("#ver-year-input").val().trim();
 
     if ((verMonth === "") || (verDay === "") || (verYear === "")) {
-        //replace with SWAL
         swal({
             icon: "error",
             title: "MISSING INFO",
@@ -103,28 +102,44 @@ $("#host-submit").on("click", function (event) {
     var newArrState = $("#host-arr-state").val().trim();
     var newTripDetails = $("#host-trip-details").val();
 
-    var newTrip = {
-        departCity: newDepCity,
-        departState: newDepState,
-        destinationCity: newArrCity,
-        destinationState: newArrState,
-        dt: newDepDate,
-        smoking: newSmoking,
-        seats: newSeats,
-        details: newTripDetails
-    };
+    if ((newDepMonth === "") || (newDepDay === "") || (newDepYear === "") || (newSeats === "") || (newSmoking === "") || (newDepCity === "") || (newDepState === "") || (newArrCity === "") || (newArrState === "")) {
+        swal({
+            icon: "error",
+            title: "MISSING INFO",
+            text: "Please fill in empty fields.",
+            button: "Ok"
+        });
+    }
+    else {
 
-    $.ajax("/api/trip", {
-        type: "POST",
-        data: newTrip
-    }).then(
-        function () {
-            console.log("Created new trip!");
-            console.log(newTrip);
+        var newTrip = {
+            departCity: newDepCity,
+            departState: newDepState,
+            destinationCity: newArrCity,
+            destinationState: newArrState,
+            dt: newDepDate,
+            smoking: newSmoking,
+            seats: newSeats,
+            details: newTripDetails
+        };
 
-            //ADD SWAL!
-        }
-    )
+        $.ajax("/api/trip", {
+            type: "POST",
+            data: newTrip
+        }).then(
+            function () {
+                swal({
+                    icon: "success",
+                    title: "TRIP POSTED!",
+                    showConfirmButton: true,
+                    confirmButtonText: "OK",
+                    closeOnConfirm: false
+                }).then(function (result) {
+                    window.location = "/home";
+                })
+            }
+        )
+    }
 });
 
 //search functionality
@@ -160,7 +175,18 @@ $("#submit-search").on("click", function (event) {
             };
             console.log(matches);
         };
+
+        if(matches.length === 0){
+            swal({
+                icon: "error",
+                title: "NO MATCHES",
+                text: "No matching trips!",
+                button: "Ok"
+            });
+        }
+        else{
         createCard();
+        };
     });
 });
 
@@ -178,14 +204,13 @@ function createCard() {
 
     for (var i = 0; i < matches.length; i++) {
         var smokingValid = ""
-        
-        if(matches[i].smoking === 0){
+
+        if (matches[i].smoking === 0) {
             smokingValid = "No Smoking in vehicle"
         }
-        else if(matches[i].smoking === 1){
+        else if (matches[i].smoking === 1) {
             smokingValid = "Smoking allowed in vehicle"
         };
-        var buttonId = "join" + [i];
         var formattedDate = moment(matches[i].dt).format('MMMM Do YYYY');
 
         var newTripCard = $('<div class="card trip-card">');
@@ -195,7 +220,7 @@ function createCard() {
         var newCardSmoking = $('<p class="card-text">').text(smokingValid);
         var newCardSeats = $('<p class="card-text">').text("Seats available: " + matches[i].seats);
         var newCardDetails = $('<p class="card-text">').text(matches[i].details);
-        var newCardJoin = $('<button class="join-btn" id="' + buttonId + '">').html("join");
+        var newCardJoin = $('<button class="join-btn" value='+ matches[i].id +'>').html("join");
 
         newTripCardBody.append(newCardDate);
         newTripCardBody.append(newCardFromTo);
@@ -208,3 +233,42 @@ function createCard() {
 
     };
 };
+
+$("#match-results").on("click" , ".join-btn" , function(event){
+  var matchId = parseInt($(".join-btn").val());
+    console.log(matchId);
+    console.log(matches[0].id);
+    for(var i = 0 ; i < matches.length ; i++){
+        var tripId = parseInt(matches[i].id);
+        console.log(tripId);
+        console.log(matchId);
+        if(matchId === tripId){
+            var currentSeats = parseInt(matches[i].seats);
+            var updatedSeats = currentSeats - 1;
+            console.log(currentSeats);
+            console.log(updatedSeats);
+            var newSeats = {
+                seats: updatedSeats
+            };
+
+            $.ajax({
+                url: window.location.origin + "/api/trip/" + tripId,
+                type: "PUT",
+                data: newSeats
+            }).then(
+                function(){
+                    console.log("changed seats to: " + updatedSeats);
+                    swal({
+                        icon: "success",
+                        title: "TRIP POSTED!",
+                        showConfirmButton: true,
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false
+                    }).then(function (result) {
+                        window.location = "/home";
+                    });
+                }
+            );
+        };
+    };
+});
