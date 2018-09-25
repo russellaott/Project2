@@ -128,6 +128,38 @@ $("#host-submit").on("click", function (event) {
 });
 
 //search functionality
+$(".joinTrip").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).data("id");
+    var seats = $(this).data("seats");
+    var updatedSeats = {
+        seats: seats -1 
+    };
+
+    $.ajax({
+        url: window.location.origin + "/api/trip/" + id,
+        type: "PUT",
+        data: updatedSeats,
+    }).then(function () {
+        console.log("The seats have been updated..");
+        if (seats > 0) {
+            swal({
+                title: "Awesome!",
+                text: "You've saved your seat and have been added to the roadtrip.",
+                icon: "success",
+            });
+        }
+        else {
+            swal({
+                title: "Sorry!",
+                text: "There are no more seats available for this trip.",
+                icon: "warning",
+            });
+        }
+
+    })
+})
+
 $("#submit-search").on("click", function (event) {
     event.preventDefault();
 
