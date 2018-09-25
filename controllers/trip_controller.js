@@ -5,16 +5,6 @@ var router = express.Router();
 // Import the model to use its database functions.
 var trip = require("../models/trip.js");
 
-router.get("/search" , function(req , res){
-    trip.all(function(data){
-        var hbsObject = {
-            trip: data
-        };
-        console.log(hbsObject);
-        res.render("search" ,hbsObject);
-    });
-});
-
 router.get("/browse", function (req, res) {
     trip.all(function (data) {
         var hbsObject = {
@@ -25,9 +15,29 @@ router.get("/browse", function (req, res) {
     });
 });
 
+router.get("/api/trip" , function(req , res){
+    trip.all(function (data) {
+        var hbsObject = {
+            trip: data
+        };
+        console.log(hbsObject);
+        return res.json(hbsObject);
+    });
+});
+
+router.get("/api/trip", function(req, res) {
+    trip.all(function (data) {
+       var hbsObject = {
+           trip: data
+       };
+       console.log(hbsObject);
+       return res.json(hbsObject);
+    });
+});
+
 router.post("/api/trip", function (req, res) {
     trip.create([
-        "departCity", "departState", "destinationCity", "destinationState", "dt", "smoking", "details"
+        "departCity", "departState", "destinationCity", "destinationState", "dt", "smoking", "seats", "details"
     ], [
         req.body.departCity, 
         req.body.departState, 
@@ -47,14 +57,14 @@ router.put("/api/trip/:id", function (req, res) {
     console.log("Condition", condition);
 
     trip.update({
-        departCity: req.body.departCity, 
-        departState: req.body.departState, 
-        destinationCity: req.body.destinationCity, 
-        destinationState: req.body.destinationState, 
-        dt: req.body.dt, 
-        smoking: req.body.smoking, 
-        seats: req.body.seats,
-        details: req.body.details
+        // departCity: req.body.departCity, 
+        // departState: req.body.departState, 
+        // destinationCity: req.body.destinationCity, 
+        // destinationState: req.body.destinationState, 
+        // dt: req.body.dt, 
+        // smoking: req.body.smoking, 
+        seats: req.body.seats
+        // details: req.body.details
     }, condition, function (results) {
         if (results.changedRows === 0) {
             return res.status(404).end();

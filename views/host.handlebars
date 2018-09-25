@@ -1,8 +1,16 @@
 <div id="host-background">
+<<<<<<< HEAD
     <div class="jumbotron jumbotron-fluid" id="host-jumbo">
         <div class="container">
             <div class="row">
                 <div class="col-md-12" id="ver-header-1">
+=======
+
+<div class="jumbotron jumbotron-fluid" id="host-jumbo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="ver-header-1">
+>>>>>>> b8dbb7174dd47bb29823c0f2c37dda1071efccc6
                 <h2 class="display-4">Host a Trip</h2>
             </div>
         </div>
@@ -27,6 +35,20 @@
                 </div>
             </div>
          </div>
+
+    <div class="container-fluid text-center" id="search-nav">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="search-btn" id="search-btn">Search Trips</button>
+            </div>
+            <div class="col-md-4">
+                <button class="search-btn" id="browse-btn">Browse Trips</button>
+            </div>
+            <div class="col-md-4">
+                <button class="search-btn" id="home-btn">Go Home</button>
+            </div>
+        </div>
+    </div>
 
         <div class="row">
             <div class="col-md-1"></div>
@@ -72,9 +94,10 @@
                 </form>
             </div>
              <div class="col-md-3" id="form-smoking">
-                 <form>
-                    <input class="form-control" type="number" name="seats" id="host-seats">
-                </form>
+                 <select name="smoking" class="form-control" id="host-smoking">
+                            <option value="1">Allowed</option>
+                            <option value="0">Not in my car</option>
+                </select>
             </div>
         </div>
 
@@ -99,7 +122,7 @@
                     <form>
                          <select name="states" class="form-control" id="host-dep-state">
                             {{#each states}}
-                            <option value="{{name}}">{{abbreviation}}</option>
+                            <option value="{{abbreviation}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
@@ -117,7 +140,7 @@
                     <form>
                          <select name="states" class="form-control" id="host-arr-state">
                             {{#each states}}
-                            <option value="{{name}}">{{abbreviation}}</option>
+                            <option value="{{abbreviation}}">{{abbreviation}}</option>
                             {{/each}}
                         </select>
                     </form>
@@ -145,8 +168,14 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <button type="submit" class="btn btn-dark btn-lg btn-block" id="host-submit">
     <i class="fa fa-check-circle" aria-hidden="true"></i>
     Submit Your Trip</button>
 
     </div>
+=======
+<button type="submit" class="btn btn-dark btn-lg btn-block" id="host-submit">Submit Your Trip</button>
+
+</div>
+>>>>>>> b8dbb7174dd47bb29823c0f2c37dda1071efccc6
