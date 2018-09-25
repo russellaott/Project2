@@ -29,13 +29,13 @@
 }
 
 #main-jumbo {
-    background: rgba(207, 95, 114, 0.411);
+    background: rgba(207, 131, 95, 0.582);
     margin-block-end: 0;
     margin-bottom: 0px;
 }
 
 #nav-btn-container{
-    background:  rgb(230, 116, 10);
+    background: rgba(207, 131, 95, 0.582);
     padding: 10px;
 }
 
@@ -89,6 +89,7 @@
     overflow: hidden;
     outline:none;
     color: white;
+    font-weight: 500;
 }
 
 #search-background{
@@ -117,6 +118,7 @@
     overflow: hidden;
     outline:none;
     color: white;
+    font-weight: bolder;
 }
 
 #submit-search{
@@ -133,4 +135,18 @@
 #match-results{
     padding-left: 50px;
     padding-right: 50px;
+}
+
+#host-background {
+    background-image: url(../img/host-bck.jpg);    
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 720px;
+    }
+
+#host-jumbo{
+    background:  rgba(243, 149, 72, 0.432);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
 }

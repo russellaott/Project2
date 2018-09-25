@@ -53,6 +53,7 @@ router.put("/api/trip/:id", function (req, res) {
         destinationState: req.body.destinationState, 
         dt: req.body.dt, 
         smoking: req.body.smoking, 
+        seats: req.body.seats,
         details: req.body.details
     }, condition, function (results) {
         if (results.changedRows === 0) {

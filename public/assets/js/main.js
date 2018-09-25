@@ -188,14 +188,14 @@ function createCard() {
         var buttonId = "join" + [i];
         var formattedDate = moment(matches[i].dt).format('MMMM Do YYYY');
 
-        var newTripCard = $('<div class="card">');
+        var newTripCard = $('<div class="card trip-card">');
         var newTripCardBody = $('<div class="card-body">');
         var newCardDate = $('<h5 class="card-title">').text(formattedDate);
-        var newCardFromTo = $('<h6 class="card-subtitle mb-2 text-muted">').text(matches[i].departCity + "," + matches[i].departState + "  -to-  " + matches[i].destinationCity + "," + matches[i].destinationState);
+        var newCardFromTo = $('<h6 class="card-subtitle mb-2">').text(matches[i].departCity + "," + matches[i].departState + "  -to-  " + matches[i].destinationCity + "," + matches[i].destinationState);
         var newCardSmoking = $('<p class="card-text">').text(smokingValid);
         var newCardSeats = $('<p class="card-text">').text("Seats available: " + matches[i].seats);
         var newCardDetails = $('<p class="card-text">').text(matches[i].details);
-        var newCardJoin = $('<button id="' + buttonId + '">').html("join");
+        var newCardJoin = $('<button class="join-btn" id="' + buttonId + '">').html("join");
 
         newTripCardBody.append(newCardDate);
         newTripCardBody.append(newCardFromTo);
