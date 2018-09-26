@@ -13,7 +13,17 @@
 }
 
 #host-submit{
- border-radius: 0px;
+    border-radius: 0px;
+    background: transparent;
+    font-weight: 500;
+    border-style: none;
+    padding-bottom: 20px;
+    color: white;
+   }
+
+   #host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
 }
 
 #ver-background{
@@ -34,12 +44,8 @@
     margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
 #home-nav{
     color: black;
-=======
-#nav-btn-container{
->>>>>>> b8dbb7174dd47bb29823c0f2c37dda1071efccc6
     background: rgba(207, 131, 95, 0.582);
     padding: 10px;
     
@@ -63,7 +69,7 @@ height: 720px;
     background:  rgba(74, 156, 233, 0.603);
     margin-block-end: 0;
     margin-bottom: 0px;  
-    height: 200px;
+    height: 240px;
 }
 
 #browse-nav {
@@ -98,7 +104,7 @@ height: 720px;
 }
 
 #search-subtxt{
-    fontsize: 32px;
+    font-size: 32px;
     color: rgb(0, 39, 7);
 }
 
@@ -130,6 +136,7 @@ height: 720px;
     height: 500px;
 }
 
+
 #search-jumbo{
     background: rgba(250, 240, 206, 0.658);
     margin-block-end: 0;
@@ -160,38 +167,16 @@ height: 720px;
     cursor: pointer;
     overflow: hidden;
     outline:none;
-<<<<<<< HEAD
     color: white;
     font-size: 24px;
 }
 
-#host-jumbo {
-    background:  rgba(243, 149, 72, 0.582);
+#host-jumbo{
+    background:  rgba(243, 149, 72, 0.432);
     margin-block-end: 0;
     margin-bottom: 0px;  
-    height: 200px;
-}
-
-#host-background {
-background-image: url(http://images6.fanpop.com/image/photos/41400000/A-road-and-lighthouse-along-the-Oregon-Coast-at-sunset-sample-pictures-41407757-1920-1200.jpg);    
-background-size: auto;
-background-repeat: no-repeat;
-background-size: cover;
-height: 720px;
-}
-
-#host-nav {
-    background:  rgba(243, 149, 72, 0.582);
-    padding: 10px;  
-}
-=======
-    color:rgb(0, 39, 7);
-    font-size: 32px;
-}
-
-#match-results{
-    padding-left: 50px;
-    padding-right: 50px;
+    color: white;
+    height: 790px;
 }
 
 #host-background {
@@ -199,12 +184,13 @@ height: 720px;
     background-size: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 720px;
+    height: 790px;
     }
 
-#host-jumbo{
-    background:  rgba(243, 149, 72, 0.432);
-    margin-block-end: 0;
-    margin-bottom: 0px;  
+#host-nav {
+    background:  rgba(243, 149, 72, 0.582);
+    padding: 10px;  
 }
->>>>>>> b8dbb7174dd47bb29823c0f2c37dda1071efccc6
+
+
+
