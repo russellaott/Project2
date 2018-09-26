@@ -18,13 +18,23 @@
 }
 
 #host-submit{
+    border-radius: 0px;
+    background: transparent;
+    font-weight: 500;
+    border-style: none;
+    padding-bottom: 20px;
+    color: white;
+   }
+
+   #host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
  border-radius: 0px;
  background: transparent;
  font-weight: 500;
  border-style: none;
  padding-bottom: 20px;
  color: white;
-
 }
 
 #ver-background{
@@ -45,15 +55,43 @@
     margin-bottom: 0px;
 }
 
-#nav-btn-container{
+#home-nav{
+    color: black;
     background: rgba(207, 131, 95, 0.582);
     padding: 10px;
+    
 }
 
 #home-background {
     background-image: url(https://itsreallykita.com/winter2016/wp-content/uploads/2017/05/bigstock-Group-of-happy-young-friends-i-170106395.jpg);
     background-size: auto;
     height: 720px;
+}
+
+#browse-background {
+background-image: url(../img/southwest-desert-road-blackwhite1024x768.jpg);
+background-size: auto;
+background-repeat: no-repeat;
+background-size: cover;
+height: 720px;
+}
+
+#browse-jumbo {
+    background:  rgba(74, 156, 233, 0.603);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    height: 240px;
+}
+
+#browse-nav {
+    background: rgba(74, 156, 233, 0.603);  
+  
+}
+
+#browse-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
 }
 
 #app-name {
@@ -109,6 +147,7 @@
     height: 500px;
 }
 
+
 #search-jumbo{
     background: rgba(250, 240, 206, 0.658);
     margin-block-end: 0;
@@ -139,13 +178,16 @@
     cursor: pointer;
     overflow: hidden;
     outline:none;
-    color:rgb(0, 39, 7);
-    font-size: 32px;
+    color: white;
+    font-size: 24px;
 }
 
-#match-results{
-    padding-left: 50px;
-    padding-right: 50px;
+#host-jumbo{
+    background:  rgba(243, 149, 72, 0.432);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    color: white;
+    height: 790px;
 }
 
 #host-background {
@@ -156,26 +198,11 @@
     height: 790px;
     }
 
-#host-jumbo{
-    background:  rgba(243, 149, 72, 0.432);
-    margin-block-end: 0;
-    margin-bottom: 0px;  
-    color: white;
-    height: 790px;
+
+#host-nav {
+    background:  rgba(243, 149, 72, 0.582);
+    padding: 10px;  
 }
 
-.swal-button {
-    background-color: rgb(77, 77, 77);
-    border: 1px solid #686767;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-  }
 
-  .swal-overlay {
-    background-color: rgba(83, 83, 83, 0.45);
-  }
 
-  .swal-title {
-    font-size: 34px;
-    font-family: 'Quicksand', sans-serif;
-  }
-  
