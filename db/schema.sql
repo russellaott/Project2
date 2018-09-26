@@ -18,7 +18,7 @@ CREATE TABLE trip
 =======
 	seats int NOT NULL,
     details VARCHAR(500) CHARACTER SET utf8,
->>>>>>> master
+>>>>>>> 174d20e9af16ce35ba90b7b42868ee603ce1b702
 	PRIMARY KEY (id)
 );
 

@@ -3,6 +3,11 @@
     padding-right: 100px;
 }
 
+#host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
+}
+
 #ver-checkbox{
     float: right;
     margin-right: 150px;
@@ -24,6 +29,12 @@
    #host-header{
     font-family: 'Quicksand', sans-serif;
     font-size: 72px;
+ border-radius: 0px;
+ background: transparent;
+ font-weight: 500;
+ border-style: none;
+ padding-bottom: 20px;
+ color: white;
 }
 
 #ver-background{
@@ -186,6 +197,7 @@ height: 720px;
     background-size: cover;
     height: 790px;
     }
+
 
 #host-nav {
     background:  rgba(243, 149, 72, 0.582);
