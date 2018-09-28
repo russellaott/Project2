@@ -1,59 +1,41 @@
 <div id="browse-background">
 
-<div class="jumbotron jumbotron-fluid" id="browse-jumbo">
-
-        <div class="container">
-
-            <h1 id="browse-title">Browse a list of trips already hosted</h1>
-            
-           
-
+  <div class="jumbotron jumbotron-fluid" id="browse-jumbo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="browse-title">See where people are going!</h1>
         </div>
-
-
-    </div>
-
-       <div class="container-fluid text-center" id="browse-nav">
-        <div class="row">
-            <div class="col-md-4">
-                <button class="search-btn" id="home-btn">Go Home</button>
-            </div>
-            <div class="col-md-4">
-                <button class="search-btn" id="host-btn">Host A Trip</button>
-            </div>
-              <div class="col-md-4">
-                    <button class="main-btn" id="search-btn">Search A Trip</button>
-                </div>
-            
-        </div>
-    </div>
-
-<div id="accordion">
-  <div class="card">
-    <div class="trip-card" style="backround: transparent;">
-      <div class="card-body">
-        <div class="trip-details">
-          <h4 class="trip-card-text">Trip Details</h4>
-        </div>
-        <h3 class="trip-card-title">{{destinationCity}} {{destinationState}}</h3>
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-          Read more about this trip..
-        </button>
-        </h5>
       </div>
-      
-
-      <div id="collapse" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-        <div class="card-body">
-          <h5 class="trip-card-copy">Leaving from:</h5>
-          <p>{{departCity}} {{departState}}</p>
-          <h5 class="trip-card-copy">Time of Departure:</h5>
-          <p>{{dt}}</p>
-          <h5>Number of available seats:</h5>
-          <p id="numOfSeats">{{seats}}</p>
-          <p>{{details}}</p>
-          <button class="joinTrip" class="btn btn-primary" data-id="{{id}}" data-seatsUpdate="{{seats}}">Join Trip</a>
+      <div class="row">
+        <div class="col-md-12" id="ver-header-2">
+          <h4 class="browse-subtxt lead ml-4">Join a trip!</h4>
         </div>
       </div>
     </div>
-    <br>
+  </div>
+
+  <div class="container-fluid text-center" id="browse-nav">
+    <div class="row">
+      <div class="col-md-4">
+        <button class="search-btn" id="home-btn">Go Home</button>
+      </div>
+      <div class="col-md-4">
+        <button class="search-btn" id="host-btn">Host A Trip</button>
+      </div>
+      <div class="col-md-4">
+        <button class="main-btn" id="search-btn">Search A Trip</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 my-3" id="browseTripCard">
+          {{#each trip}} {{>trips/trip-block}} {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <script src="" async defer></script>
+</div>

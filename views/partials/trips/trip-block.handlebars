@@ -1,46 +1,9 @@
-{{!-- <div class="trip-card" style="width: 30rem;">
+<div class="card my-3">
   <div class="card-body">
-    <div class="trip-details">
-      <h4 class="trip-card-text">Trip Details</h4>
-    </div>
-    <h3 class="trip-card-title">{{destinationCity}} {{destinationState}}</h3>
-    <h5 class="trip-card-copy">Leaving from:</h5>
-    <p>{{departCity}} {{departState}}</p>
-    <h5 class="trip-card-copy">Time of Departure:</h5>
-    <p>{{dt}}</p>
-    <h5>Number of available seats:</h5>
-    <p>{{seats}}</p>
-    <p>{{details}}</p>
-    <button class="joinTrip" class="btn btn-primary" data-id="{{id}}" data-seatsUpdate="{{seats}}">Join Trip</a>
+    <h5 class="card-title">{{departCity}} , {{departState}} -TO- {{destinationCity}} , {{destinationState}}</h5>
+    <h6 class="card-subtitle mb-2">{{dt}}</h6>
+    <p class="card-text">Number of seats available: {{seats}}</p>
+     <p class="card-text">{{details}}</p>
+      <button class="joinTrip join-btn" data-id="{{id}}" data-seats="{{seats}}">Join Trip</a>
   </div>
 </div>
-<br> --}}
-
-<div id="accordion">
-  <div class="card">
-    <div class="trip-card" style="width: 30rem;">
-      <div class="card-body">
-        <div class="trip-details">
-          <h4 class="trip-card-text">Trip Details</h4>
-        </div>
-        <h3 class="trip-card-title">{{destinationCity}} {{destinationState}}</h3>
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-          Read more about this trip..
-        </button>
-        </h5>
-      </div>
-
-      <div id="collapse" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-        <div class="card-body">
-          <h5 class="trip-card-copy">Leaving from:</h5>
-          <p>{{departCity}} {{departState}}</p>
-          <h5 class="trip-card-copy">Time of Departure:</h5>
-          <p>{{dt}}</p>
-          <h5>Number of available seats:</h5>
-          <p id="numOfSeats">{{seats}}</p>
-          <p>{{details}}</p>
-          <button class="joinTrip" class="btn btn-primary" data-id="{{id}}" data-seats="{{seats}}">Join Trip</a>
-        </div>
-      </div>
-    </div>
-    <br>

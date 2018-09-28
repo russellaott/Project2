@@ -16,13 +16,13 @@
                 </div>
             </div>
 
-            <div class="row mx-5 my-5" id="search-row">
-                <div class="col-md-3">
+            <div class="row mx-5 search-row" id="search-dep-row">
+                <div class="col-md-8">
                     <form>
                         <input class="form-control" type="text" name="dep-city" id="dep-city" placeholder="City">
                     </form>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <form>
                         <select name="states" class="form-control" id="dep-state">
                             {{#each states}}
@@ -31,15 +31,20 @@
                         </select>
                     </form>
                 </div>
-                <div class="col-md-2">
+            </div>
+
+            <div class="row mx-5 my-5 search-row" id="search-to-row">
+                <div class="col-md-12">
                     <h4 class="text-center" id="to">- TO - </h4>
                 </div>
-                <div class="col-md-3">
+            </div>
+            <div class="row mx-5 search-row" id="search-des-row">
+                <div class="col-md-8">
                     <form>
                         <input class="form-control" type="text" name="arr-city" id="arr-city" placeholder="City">
                     </form>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <form>
                         <select name="states" class="form-control" id="arr-state">
                             {{#each states}}
@@ -71,7 +76,7 @@
     </div>
 
     <div class="container" id="match-results">
-       
+
     </div>
 
 

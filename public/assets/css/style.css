@@ -1,11 +1,8 @@
+/* verification page */
+
 #DOB-row{
     padding-left: 100px;
     padding-right: 100px;
-}
-
-#host-header{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 72px;
 }
 
 #ver-checkbox{
@@ -14,28 +11,8 @@
 }
 
 #ver-submit{
- border-radius: 0px;
-}
-
-#host-submit{
     border-radius: 0px;
-    background: transparent;
-    font-weight: 500;
-    border-style: none;
-    padding-bottom: 20px;
-    color: white;
    }
-
-   #host-header{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 72px;
- border-radius: 0px;
- background: transparent;
- font-weight: 500;
- border-style: none;
- padding-bottom: 20px;
- color: white;
-}
 
 #ver-background{
     background-image: url(../img/bwbg2.jpg);
@@ -48,6 +25,61 @@
     margin-bottom: 0px;
     margin-block-end: 0;
 }
+
+
+/* host page */
+
+#host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
+}
+
+#host-submit{
+    border-radius: 0px;
+    background: transparent;
+    font-weight: 500;
+    border-style: none;
+    padding-bottom: 20px;
+    color: white;
+   }
+
+#host-header{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 72px;
+ border-radius: 0px;
+ background: transparent;
+ font-weight: 500;
+ border-style: none;
+ padding-bottom: 20px;
+ color: white;
+}
+
+#host-jumbo{
+    background:  rgba(243, 149, 72, 0.432);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    color: white;
+    height: 800px;
+}
+
+#host-background {
+    background-image: url(../img/host-bck.jpg);    
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    }
+
+
+#host-nav {
+    background:  rgba(243, 149, 72, 0.582);
+    padding: 10px;  
+}
+
+
+
+
+/* home page */
 
 #main-jumbo {
     background: rgba(207, 131, 95, 0.582);
@@ -68,55 +100,12 @@
     height: 720px;
 }
 
-#browse-background {
-background-image: url(../img/southwest-desert-road-blackwhite1024x768.jpg);
-background-size: auto;
-background-repeat: no-repeat;
-background-size: cover;
-height: 720px;
-}
-
-#browse-jumbo {
-    background:  rgba(74, 156, 233, 0.603);
-    margin-block-end: 0;
-    margin-bottom: 0px;  
-    height: 240px;
-}
-
-#browse-nav {
-    background: rgba(74, 156, 233, 0.603);  
-  
-}
-
-#browse-title {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 60px;
-}
-
 #app-name {
     font-size: 100px;
     font-family: 'Quicksand', sans-serif;
     color: rgb(230, 116, 10);
     margin-bottom: 0px;
     
-}
-
-#header-text{
-    font-size: 72px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(0, 61, 10);
-}
-
-#to{
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(0, 61, 10);
-    font-weight: bold;
-}
-
-#search-subtxt{
-    font-size: 32px;
-    color: rgb(0, 39, 7);
 }
 
 #index-subtxt{
@@ -129,7 +118,6 @@ height: 720px;
     color: white;
 }
 
-
 .main-btn {
     background-color: transparent;
     background-repeat:no-repeat;
@@ -140,24 +128,83 @@ height: 720px;
     color: white;
     font-weight: 500;
 }
+/* browse page */
+
+#browse-background {
+background-image: url(../img/browsebckgrd.jpg);
+background-size: auto;
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+}
+
+#browse-jumbo {
+    background:  rgba(76, 108, 138, 0.863);
+    margin-block-end: 0;
+    margin-bottom: 0px;  
+    height: 300px;
+}
+
+#browse-nav {
+    background:  rgba(76, 108, 138, 0.863);
+  padding: 10px;
+}
+
+#browse-title {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+}
+
+
+.browse-subtxt{
+    color: white;
+    font-size: 32px;
+}
+
+
+/* search page */
+
+#header-text{
+    font-size: 72px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+#to{
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+#search-subtxt{
+    font-size: 32px;
+    color:white;
+    margin-bottom: 30px;
+}
 
 #search-background{
-    background-image: url(../img/retro-sign.jpg);
-    background-size: cover;
-    height: 500px;
+    background-image: url(https://cdn-images-1.medium.com/max/2000/1*HyeK5kD69o1EztR9A-WSzA.jpeg);
+    height: 100%;
 }
 
 
 #search-jumbo{
-    background: rgba(250, 240, 206, 0.658);
+    background: rgba(80, 109, 103, 0.664);
     margin-block-end: 0;
     margin-bottom: 0px;
-    height: 500px;
+    height: 670px;
 }
 
 #search-nav{
-    background:rgb(0, 61, 10);
+    background: rgba(80, 109, 103, 0.664);
     padding: 10px;
+}
+
+.search-row{
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .search-btn{
@@ -182,27 +229,59 @@ height: 720px;
     font-size: 24px;
 }
 
-#host-jumbo{
-    background:  rgba(243, 149, 72, 0.432);
-    margin-block-end: 0;
-    margin-bottom: 0px;  
-    color: white;
-    height: 790px;
+#match-results{
+    margin-bottom: 50px;
+    margin-top:50px;
 }
 
-#host-background {
-    background-image: url(../img/host-bck.jpg);    
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 790px;
-    }
-
-
-#host-nav {
-    background:  rgba(243, 149, 72, 0.582);
-    padding: 10px;  
+.trip-card{
+    margin-bottom: 30px;
 }
 
+/* ALL PAGES */
 
+html{
+    height: 100%;
+}
 
+.swal-overlay {
+    background-color: rgba(90, 90, 90, 0.801);
+  }
+
+  .swal-button {
+    background-color: rgb(95, 95, 95);
+  }
+
+  .swal-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    color: rgb(95, 95, 95)
+  }
+
+  .card-text{
+    color: rgb(95, 95, 95);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .card-title{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    color: rgb(95, 95, 95)
+  }
+
+  .card-subtitle{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    color: rgb(95, 95, 95)
+  }
+
+  .join-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline:none;
+    color: rgb(95, 95, 95);
+    font-size: 24px;
+    float: right;
+  }

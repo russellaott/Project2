@@ -233,14 +233,6 @@ function createCard() {
     console.log("Creating Card!");
     console.log(matches.length);
 
-    var newTitleCard = $('<div class="card mt-5 mb-2">');
-    var newTitleCardBody = $('<div class="card-body">');
-    var newCardTitle = $('<h5 class="card-title">').text("Matching Trips...");
-
-    newTitleCardBody.append(newCardTitle);
-    newTitleCard.append(newTitleCardBody);
-    $("#match-results").append(newTitleCard);
-
     for (var i = 0; i < matches.length; i++) {
         var smokingValid = ""
 
@@ -259,7 +251,7 @@ function createCard() {
         var newCardSmoking = $('<p class="card-text">').text(smokingValid);
         var newCardSeats = $('<p class="card-text">').text("Seats available: " + matches[i].seats);
         var newCardDetails = $('<p class="card-text">').text(matches[i].details);
-        var newCardJoin = $('<button class="join-btn" value='+ matches[i].id +'>').html("join");
+        var newCardJoin = $('<button class="join-btn" value='+ matches[i].id +'>').html("Join Trip");
 
         newTripCardBody.append(newCardDate);
         newTripCardBody.append(newCardFromTo);
